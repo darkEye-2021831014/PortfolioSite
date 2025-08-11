@@ -1,0 +1,734 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: navy;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.nav-bar .nav-title {
+  flex: 5;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 80px;
+}
+
+.nav-bar .nav-link {
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  flex: 1;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 80px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.nav-bar .nav-link:hover {
+  color: #ff0000;
+}
+
+.nav-bar .nav-link.active {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.content {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  background-color: black;
+  color: white;
+  box-sizing: border-box;
+  min-height: 80vh;
+}
+
+/* HOME SECTION */
+.content #home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.content #home .profile {
+  flex: 1;
+  max-width: 60%;
+}
+
+.content #home .profile h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.content #home .profile .name-highlight {
+  color: #ff0000;
+  font-family: cursive;
+  font-weight: normal;
+}
+
+.content #home .profile h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.content #home .profile .highlight {
+  color: #ff0000;
+}
+
+.content #home .profile p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.content #home .profile-picture {
+  flex: 1;
+  max-width: 280px;
+  height: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 10px #ff0000cc;
+}
+
+/* ABOUT ME LINK BUTTON (in Home) */
+#about-me {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #ff0000;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+#about-me:hover {
+  background-color: #ff0000;
+  color: white;
+  border-color: #cc0000;
+}
+
+/* ABOUT SECTION */
+#about {
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+
+#about h2,
+.interests-title,
+.languages-title,
+.achievements-title,
+.about-education-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 30px;
+  border-bottom: none;
+  padding-bottom: 0;
+  width: fit-content;
+  font-family: Arial, sans-serif;
+}
+
+#about .about-profile {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 60px;
+  color: #ddd;
+}
+
+.about-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.about-education-wrapper,
+.achievements {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.achievement-links {
+  margin-bottom: 20px;
+}
+
+.achievement-links a {
+  display: inline-block;
+  margin-right: 25px;
+  color: #ff6666;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.achievement-links a:hover {
+  color: #ff0000;
+}
+
+.achievements span {
+  display: block;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.interests,
+.languages {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.interests span,
+.languages span {
+  font-style: italic;
+  color: #aaa;
+}
+
+@media (max-width: 720px) {
+  .about-row {
+    flex-direction: column;
+  }
+  .about-education-wrapper,
+  .achievements,
+  .interests,
+  .languages {
+    flex: 1 1 100%;
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+.professional-skills {
+  max-width: 400px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.professional-skills-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: block;
+  color: #ff00ff; /* pinkish */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.skill-name {
+  flex: 1;
+  font-weight: bold;
+  color: white;
+}
+
+.skill-percent {
+  width: 40px;
+  text-align: right;
+  margin-left: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.skill-bar-bg {
+  flex: 2;
+  height: 6px;
+  background-color: #444;
+  border-radius: 3px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff00ff, #e600e6);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.professional-skills,
+.personal-skills {
+  flex: 1 1 45%;
+  max-width: 45%;
+}
+
+.professional-skills-title,
+.personal-skills-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ff0000; /* pinkish */
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.skill-name {
+  flex: 1;
+  font-weight: bold;
+  color: white;
+}
+
+.skill-percent {
+  width: 40px;
+  text-align: right;
+  margin-left: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.skill-bar-bg {
+  flex: 2;
+  height: 6px;
+  background-color: #444;
+  border-radius: 3px;
+  margin-left: 15px;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #e600e6);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+.personal-skills span {
+  display: block;
+  color: #bbb;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.projects-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff00ff;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.projects-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.project-card {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+.project-technology {
+  display: block;
+  font-size: 1rem;
+  color: #bbb;
+  margin-top: 10px;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 15px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ff00ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  color: #e600e6;
+}
+
+/* Contact Section */
+#contact {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.contact-header {
+  margin-bottom: 80px;
+}
+
+.contact-header h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+.contact-info {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff00ff;
+}
+
+.contact-subtext {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Ensures the items wrap to the next line if necessary */
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.contact-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1 1 30%; /* Flexbox to make them flexible and evenly spaced */
+  min-width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-icon {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.contact-details {
+  color: white;
+}
+
+.contact-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.contact-info-text {
+  font-size: 1rem;
+  color: #bbb;
+}
+
+.social-media {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  margin-top: 40px;
+}
+
+.social-media a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.social-icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.social-handle {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.social-media a:hover .social-handle {
+  color: #ff00ff;
+}
+
+@media (max-width: 720px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media {
+    flex-direction: column;
+  }
+}
+
+.achievements {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-top: 30px;
+}
+
+.achievement-links a {
+  display: inline-block;
+  margin-right: 25px;
+  color: #ff6666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.achievement-links a:hover {
+  color: #ff0000;
+}
+
+.platform-icon {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.competitive-stats {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.stat-item {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  color: #ff00ff;
+}
+
+.stat-item p {
+  font-size: 1rem;
+}
+
+.stat-item .highlight {
+  color: #ff6666;
+  font-weight: bold;
+}
+
+.left-side {
+  flex: 1 1 45%; /* Takes 45% of the width */
+  min-width: 280px;
+}
+
+.about-education-wrapper,
+.interests,
+.languages,
+.achievements {
+  margin-top: 0;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.about-education-title,
+.interests-title,
+.languages-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff00ff;
+  margin-bottom: 20px;
+}
+
+.about-education {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.interests span,
+.languages span {
+  display: block;
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.achievements-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+
+.achievement-links a {
+  display: inline-block;
+  margin-right: 25px;
+  color: #ff6666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.achievement-links a:hover {
+  color: #ff0000;
+}
+
+.platform-icon {
+  width: 30px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.competitive-stats {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.stat-item {
+  background-color: #0217a0;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  flex: 1;
+}
+
+.stat-item h3 {
+  font-size: 1.5rem;
+  color: #ff00ff;
+}
+
+.stat-item p {
+  font-size: 1rem;
+}
+
+.stat-item .highlight {
+  color: #e6a009;
+  font-weight: bold;
+}
+
+/* Basic styling for the text */
+.name-highlight,
+.highlight {
+  color: #ff0000; /* Highlight text color */
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  display: inline-block; /* Ensure inline-block behavior for typing effect */
+}
+
+/* Typing effect styling */
+.typing-effect {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid transparent;
+  animation: typing 4s steps(25) infinite, blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Blinking cursor effect */
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #ff0000; /* Adjust cursor color */
+  }
+}
+
+/* Ensure animation restarts correctly and repeatedly */
+.typing-effect {
+  animation: typing 4s steps(25) infinite, blink-caret 0.75s step-end infinite;
+}
